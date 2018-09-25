@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class AcmeController {
 
@@ -20,5 +22,10 @@ public class AcmeController {
     @GetMapping("/v1/acme/{key}")
     public MyPojo getService(@PathVariable String key) {
         return acmeService.getService(key);
+    }
+
+    @GetMapping("/v1/acme/v1")
+    public List<MyPojo> getServiceWithList() {
+        return acmeService.getServiceUsingList();
     }
 }

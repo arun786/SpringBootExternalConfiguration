@@ -5,7 +5,7 @@ import com.arun.springexternalconfiguration.config.MyPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Map;
+import java.util.List;
 
 @Service
 public class AcmeServiceImpl implements AcmeService {
@@ -23,5 +23,10 @@ public class AcmeServiceImpl implements AcmeService {
         MyPojo mypojo = configProperties.getMap().get(key);
         return mypojo;
 
+    }
+
+    @Override
+    public List<MyPojo> getServiceUsingList() {
+        return configProperties.getList();
     }
 }
