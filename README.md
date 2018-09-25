@@ -1,5 +1,6 @@
 # SpringBootExternalConfiguration
 
+# Map
 # step 1
 
 Create a properties file as below, name as translator.properties
@@ -100,5 +101,19 @@ Call the config file
         }
     }
 
+
+# List 
+# step 1 
+
+For List we need to define in properties in the below way
+
+    acme.list[0].name=arun
+    acme.list[0].description=engineer
+    acme.list[1].name=adwiti
+    acme.list[1].description=baby
+    acme.list[2].name=pushpa
+    acme.list[2].description=engineer
+    
+     
 
 
